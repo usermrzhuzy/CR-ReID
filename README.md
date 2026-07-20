@@ -149,8 +149,7 @@ train/
 
 ## Pretrained Models
 
-The pretrained models trained on PRCC, LTCC, Celeb-reID-light, and LaST will be released on [XXX website](https://example.com).
-
+The pretrained models trained on PRCC, LTCC, Celeb-reID-light, and LaST are available on [Baidu Netdisk](https://pan.baidu.com/s/1YEgdxaWGdOdVGmypMp7TFg) with the extraction code: CCRD.
 After downloading a checkpoint, set it with `TEST.WEIGHT` when running evaluation.
 
 
