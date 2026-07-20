@@ -175,33 +175,6 @@ For LTCC, the evaluation reports:
 
 For Celeb-reID-light and LaST, the evaluation reports Rank-1, Rank-5, Rank-10, and mAP.
 
-## Important Config Options
-
-Common fields in `configs/*/*.yml`:
-
-| Option | Description |
-|--------|-------------|
-| `DATA.DATASET` | Dataset name: `prcc`, `ltcc`, `celeb_light`, or `last`. |
-| `DATA.ROOT` | Root directory containing all datasets. |
-| `DATA.META_DIR` | Attribute annotation filename. Default: `PAR_PETA_105.txt`. |
-| `MODEL.TYPE` | Model type. Current configs use `eva02_meta`. |
-| `MODEL.NAME` | Backbone/model name. Current configs use `eva02_l_meta`. |
-| `MODEL.META_DIMS` | Attribute dimension. Current configs use `[105]`. |
-| `MODEL.ADD_META` | Whether to use attribute metadata. |
-| `MODEL.MASK_META` | Whether to mask clothing-related attributes. |
-| `DATA.RANDOM_NOISE` | Whether to randomly perturb non-clothing attributes during training. |
-| `SOLVER.MAX_EPOCHS` | Number of training epochs. |
-| `SOLVER.BASE_LR` | Base learning rate. |
-| `TEST.WEIGHT` | Checkpoint path for evaluation. |
-| `TEST.TYPE` | If set to `image_only`, metadata is zeroed during testing. |
-| `OUTPUT_DIR` | Directory for logs, TensorBoard files, and checkpoints. |
-
-You can override config values from the command line:
-
-```bash
-python train.py --config_file configs/prcc/eva02_l_maskmeta_random.yml DATA.ROOT /path/to/DATA_ROOT OUTPUT_DIR ./logs/prcc
-```
-
 ## TensorBoard
 
 Training writes TensorBoard logs under `OUTPUT_DIR`:
